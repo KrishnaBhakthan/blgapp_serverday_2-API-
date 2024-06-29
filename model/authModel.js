@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const userSchema = new mongoose.schema({
+const userSchema = new mongoose.Schema({
     email :{
         type:String,
         required:true,
@@ -19,15 +19,15 @@ const userSchema = new mongoose.schema({
         required:true,
         enum:["male","female","other"]
     },
-    profilePicture:{
-        type:string,
+    profilePicture: {
+        type: String,
         default:"https://i.pinimg.com/736x/de/59/4e/de594ec09881da3fa66d98384a3c72ff.jpg"
-    }
+    }, 
 
 
 
 },{
-    timestamp:true
+    timestamps:true
 }
 
 );
